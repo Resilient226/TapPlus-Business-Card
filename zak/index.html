@@ -8,10 +8,7 @@
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
-  html, body {
-    height: 100%;
-    width: 100%;
-  }
+  html, body { height: 100%; width: 100%; }
 
   body {
     background: #0a0a0a;
@@ -25,7 +22,6 @@
     overflow: hidden;
   }
 
-  /* ── RIPPLE BACKGROUND ── */
   .ripple-bg {
     position: fixed;
     top: 50%;
@@ -55,7 +51,6 @@
     100% { width: 700px; height: 700px; opacity: 0; }
   }
 
-  /* ── CARD ── */
   .card {
     position: relative;
     z-index: 1;
@@ -67,7 +62,6 @@
     align-items: center;
   }
 
-  /* ── LOGO (CSS recreation of Tap+) ── */
   .logo {
     margin-bottom: 24px;
     display: flex;
@@ -90,7 +84,6 @@
     letter-spacing: -0.02em;
   }
 
-  /* ── MOTTO ── */
   .motto {
     font-size: 11px;
     font-weight: 400;
@@ -101,7 +94,6 @@
     text-align: center;
   }
 
-  /* ── DIVIDER ── */
   .line {
     width: 32px;
     height: 1px;
@@ -110,7 +102,6 @@
     margin-bottom: 40px;
   }
 
-  /* ── NAME ── */
   .name {
     font-size: 24px;
     font-weight: 600;
@@ -129,13 +120,11 @@
     text-align: center;
   }
 
-  /* ── LINKS ── */
   .links {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-bottom: 28px;
   }
 
   .link-btn {
@@ -151,7 +140,6 @@
     font-size: 14px;
     font-weight: 500;
     font-family: 'DM Sans', sans-serif;
-    transition: border-color 0.2s, background 0.2s;
     -webkit-tap-highlight-color: transparent;
   }
 
@@ -160,6 +148,14 @@
     border-color: rgba(45,212,191,0.3);
   }
 
+  .link-btn.teal {
+    background: #2dd4bf;
+    border-color: #2dd4bf;
+    color: #000;
+  }
+
+  .link-btn.teal:active { opacity: 0.85; }
+
   .link-icon {
     font-size: 17px;
     width: 22px;
@@ -167,7 +163,6 @@
     flex-shrink: 0;
   }
 
-  .link-label {}
   .link-sub {
     font-size: 11px;
     color: #52525b;
@@ -176,34 +171,13 @@
     display: block;
   }
 
-  /* ── CTA ── */
-  .cta-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    width: 100%;
-    background: #2dd4bf;
-    border: none;
-    border-radius: 14px;
-    padding: 16px 20px;
-    text-decoration: none;
-    color: #000;
-    font-size: 14px;
-    font-weight: 600;
-    font-family: 'DM Sans', sans-serif;
-    letter-spacing: 0.01em;
-    -webkit-tap-highlight-color: transparent;
-    transition: opacity 0.15s;
+  .link-btn.teal .link-sub {
+    color: rgba(0,0,0,0.5);
   }
-
-  .cta-btn:active { opacity: 0.8; }
-  .arrow { font-size: 15px; }
 </style>
 </head>
 <body>
 
-<!-- Ripple rings -->
 <div class="ripple-bg">
   <div class="ripple-ring"></div>
   <div class="ripple-ring"></div>
@@ -226,24 +200,34 @@
   <div class="links">
     <a class="link-btn" href="tel:+17062545909">
       <span class="link-icon">📞</span>
-      <div class="link-label">
+      <div>
         (706) 254-5909
         <span class="link-sub">Tap to call</span>
       </div>
     </a>
     <a class="link-btn" href="mailto:zakjbowles@gmail.com">
       <span class="link-icon">✉️</span>
-      <div class="link-label">
+      <div>
         zakjbowles@gmail.com
         <span class="link-sub">Tap to email</span>
       </div>
     </a>
+    <a class="link-btn" href="https://tapplus.top" target="_blank">
+      <span class="link-icon">🌐</span>
+      <div>
+        tapplus.top
+        <span class="link-sub">Visit our website</span>
+      </div>
+    </a>
+    <a class="link-btn teal" href="https://tapplus.link" target="_blank">
+      <span class="link-icon">📲</span>
+      <div>
+        tapplus.link
+        <span class="link-sub">Open the app</span>
+      </div>
+    </a>
   </div>
-
-  <a class="cta-btn" href="https://tapplus.top" target="_blank">
-    Start your free trial <span class="arrow">→</span>
-  </a>
 
 </div>
 </body>
-</
+</html>
